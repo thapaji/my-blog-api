@@ -2,7 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import { conectMongo } from "./src/config/mongoDBConfig.js";
 import cors from 'cors';
-// import userRouter from './src/routers/userRouter.js'
+import userRouter from './src/routers/userRouter.js'
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cors())
 
 /*************** Routers and endpoints ***********************/
-// app.use('/api/v1/users', userRouter)
+app.use('/api/users', userRouter)
 
 app.get('/', (req, res, next) => {
   res.json({
