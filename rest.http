@@ -1,0 +1,22 @@
+###Server api
+@rootURL = http://localhost:8000
+@apiEp  = {{rootURL}}/api/users
+
+###check the ep server status
+GET {{apiEp}}
+
+
+###Get users
+GET {{apiEp}}  
+
+### Post user 
+POST {{apiEp}}
+Content-Type: application/json
+
+{
+    "name": "Sujan Thapa",
+    "phone": "0401602430",
+    "email": "a@a.com",
+    "password": "sa"
+  
+}

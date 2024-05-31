@@ -17,6 +17,7 @@ export const verifyAccessJWT = (token) => {
     try {
         return JWT.verify(token, process.env.ACCESS_TOKEN_SECRET);
     } catch (error) {
+        console.log('::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::')
         console.log(error);
         return 'Invalid Token';
     }

@@ -23,8 +23,7 @@ const joiValiValidator = ({ req, res, next, schema }) => {
 export const newUserValidation = (req, res, next) => {
 
     const schema = Joi.object({
-        fname: Joi.string().required(),
-        lname: Joi.string().required(),
+        name: Joi.string().required(),
         phone: Joi.string().allow("", null),
         email: Joi.string().email({ minDomainSegments: 2 }),
         password: Joi.string().required(),
