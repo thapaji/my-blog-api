@@ -3,6 +3,7 @@ import morgan from "morgan";
 import { conectMongo } from "./src/config/mongoDBConfig.js";
 import cors from 'cors';
 import userRouter from './src/routers/userRouter.js'
+import blogRouter from './src/routers/blogRouter.js'
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(cors())
 
 /*************** Routers and endpoints ***********************/
 app.use('/api/users', userRouter)
+app.use('/api/blogs', blogRouter)
 
 app.get('/', (req, res, next) => {
     res.json({
