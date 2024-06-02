@@ -23,7 +23,7 @@ const BlogSchema = new mongoose.Schema({
     },
     isActive: {
         type: Boolean,
-        default: true,
+        default: false,
     },
 }, {
     timestamps: true,

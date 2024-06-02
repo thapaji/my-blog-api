@@ -86,6 +86,7 @@ router.put("/:id", auth, async (req, res, next) => {
 router.delete("/", auth, async (req, res, next) => {
     try {
         const blogIdsToDelete = req.body.ids;
+        console.log(blogIdsToDelete)
         const deleteResult = await deleteBlogSchema(blogIdsToDelete);
         res.json({
             status: "success",
